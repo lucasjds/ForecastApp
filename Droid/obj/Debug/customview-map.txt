@@ -1,0 +1,7 @@
+Button;obj/Debug/res/layout/main.xml
+FrameLayout;obj/Debug/res/layout/main.xml
+LinearLayout;obj/Debug/res/layout/main.xml
+LinearLayout;obj/Debug/res/layout/principalfragment.xml
+ListView;obj/Debug/res/layout/principalfragment.xml
+resources;obj/Debug/res/values/strings.xml
+string;obj/Debug/res/values/strings.xml
