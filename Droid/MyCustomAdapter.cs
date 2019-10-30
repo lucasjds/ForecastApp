@@ -77,6 +77,8 @@ namespace ForecastApp.Droid
 
         public Forecast() { }
 
+     
+
         public Forecast(String _cidade, String _clima, String _temperatura)
         {
             Cidade = _cidade;

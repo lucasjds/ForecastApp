@@ -20,11 +20,13 @@ namespace ForecastApp.Droid
 {
     public class PesquisaFragment : Fragment
     {
+        private List<string> forecasts;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
+            forecasts = new List<string>();
+            // Create yfoour fragment here
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -35,19 +37,33 @@ namespace ForecastApp.Droid
             base.OnCreateView(inflater, container, savedInstanceState);
 
             var view = inflater.Inflate(Resource.Layout.FavoritosFragment, container, false);
+            ListView mainList = view.FindViewById<ListView>(Resource.Id.listFavoritos);
 
             AssetManager assets = this.Activity.Assets;
             var bytes = default(byte[]);
+            
             using (TextReader reader = new StreamReader(assets.Open("city.list.json")))
             {
                 var serializer = new JsonSerializer();
                 using (var jsonTextReader = new JsonTextReader(reader))
                 {
                     var test = serializer.Deserialize(jsonTextReader);
-                    var data = JsonConvert.DeserializeObject<JsonModel>(test.ToString());
-
+                    var datas = JsonConvert.DeserializeObject<JsonModel>(test.ToString());
+                    foreach (var data in datas.Data)
+                    {
+                        forecasts.Add(data.Name);
+                    }
                 }
             }
+            ArrayAdapter<String> ad = new ArrayAdapter<String>(this.Activity, Android.Resource.Layout.SimpleListItem1, forecasts);
+            mainList.SetAdapter(ad);
+
+            mainList.ItemClick += (s, e) => {
+                Intent detalheActivity = new Intent(this.Activity, typeof(DetalheActivity));
+                var t = forecasts[e.Position];
+                detalheActivity.PutExtra("item", t);
+                StartActivity(detalheActivity);
+            };
 
             return view;
 
