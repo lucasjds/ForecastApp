@@ -10,30 +10,44 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Project;
 
 namespace ForecastApp.Droid
 {
     [Activity(Label = "DetalheActivity")]
     public class DetalheActivity : Activity
     {
-        
+        private DbHelperClass dbHelper ;
+        private Data data;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Detalhe);
+            dbHelper = new DbHelperClass(this);
             var id = Intent.GetStringExtra("item");
             PreencheTela(id);
 
             Button voltar = FindViewById<Button>(Resource.Id.voltar);
             voltar.Click += delegate {
-                StartActivity(new Intent(this, typeof(MainActivity)));
+                this.Finish();
+            };
+            
+            Button add = FindViewById<Button>(Resource.Id.add);
+            add.Click += delegate {
+                dbHelper.insertRecord(data);
+            };
+
+            Button remove = FindViewById<Button>(Resource.Id.remove);
+            remove.Click += delegate {
+                dbHelper.deleteRecord(data.Id);
             };
         }
 
 
         public async void PreencheTela(string id)
         {
-            Data data = await APIWeather.TestAsync(id);
+            data = await APIWeather.TestAsync(id);
             TextView cidade = FindViewById<TextView>(Resource.Id.cidade);
             cidade.Text = data.Name;
             TextView temperatura = FindViewById<TextView>(Resource.Id.temperatura);

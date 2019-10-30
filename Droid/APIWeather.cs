@@ -15,15 +15,14 @@ namespace ForecastApp.Droid
         public static async Task<Data> TestAsync(string id)
         {
             HttpClient client = new HttpClient();
-            stringConn += id;
-            client.BaseAddress = new Uri(stringConn);
+            client.BaseAddress = new Uri(stringConn + id);
 
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
 
             // List data response.
-            HttpResponseMessage response = client.GetAsync(stringConn).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            HttpResponseMessage response = client.GetAsync(stringConn + id).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
             Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
             string responseBody = await response.Content.ReadAsStringAsync();
             client.Dispose();

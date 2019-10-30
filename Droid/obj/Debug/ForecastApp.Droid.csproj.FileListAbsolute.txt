@@ -1,10 +1,3 @@
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/MonoAndroid,Version=v9.0.AssemblyAttributes.cs
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/build.props
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/adb.props
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_BuildLibraryImportsCache.stamp
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/resourcepaths.cache
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/res.flag
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/flata/compiled.flata
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/ForecastApp.Droid.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/ForecastApp.Droid.pdb
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/com.mobile.forecast.forecastapp.apk
@@ -13,6 +6,14 @@
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/Newtonsoft.Json.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/ForecastApp.pdb
 /Users/lucassouza/Documents/ForecastApp/Droid/bin/Debug/Newtonsoft.Json.xml
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/build.props
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/adb.props
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_BuildLibraryImportsCache.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/resourcepaths.cache
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/res.flag
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/flata/compiled.flata
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/R.txt
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/R.cs.flag
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/ForecastApp.Droid.csproj.CopyComplete
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/ForecastApp.Droid.dll
@@ -29,7 +30,6 @@
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/res/layout/principalcustomlist.xml
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/res/layout/favoritosfragment.xml
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/res/layout/detalhe.xml
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/R.txt
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/uploadflags.txt
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/resolvedassemblies.hash
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/linksrc/ForecastApp.Droid.dll
@@ -65,8 +65,8 @@
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/ForecastApp.Droid.pdb
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/ForecastApp.pdb
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Java.Interop.dll
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/machine.config
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Mono.Android.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Mono.Android.pdb
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Mono.Security.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/mscorlib.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/netstandard.dll
@@ -96,14 +96,60 @@
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/typemap.mj.x86.s
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/typemap.mj.x86_64.s
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/MonoRuntimeProvider.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/machine.config
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/bin/mono.android.jar
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/static.flag
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/buildid.txt
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/android/app/ApplicationRegistration.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/MonoPackageManager_Resources.java
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md54f94db60a8bd4df94e470954a81886d1/DbHelperClass.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md5b4a94f07f5f0edccd141695f80167282/MyCustomAdapter.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md5b4a94f07f5f0edccd141695f80167282/DetalheActivity.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md5b4a94f07f5f0edccd141695f80167282/PrincipalFragment.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md5b4a94f07f5f0edccd141695f80167282/MainActivity.java
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md5b4a94f07f5f0edccd141695f80167282/PesquisaFragment.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/md54f94db60a8bd4df94e470954a81886d1/DbHelperClass.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/bin/packaged_resources
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/com/mobile/forecast/forecastapp/R.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/bin/classes.dex
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_BuildAdditionalResourcesCache.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_CleanIntermediateIfNuGetsChange.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_CompileToDalvik.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_ConvertCustomView.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_ConvertResourcesCases.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_CopyIntermediateAssemblies.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_CopyPdbFiles.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_GenerateJavaStubs.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/ForecastApp 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/machine 2.config
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/machine 3.config
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Mono.Android 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Mono.Security 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/mscorlib 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/netstandard 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Newtonsoft.Json 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.ComponentModel.Composition 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Core 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Data 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Drawing.Common 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.IO.Compression 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.IO.Compression.FileSystem 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Net.Http 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Numerics 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Runtime 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Runtime.Serialization 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.ServiceModel.Internals 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Transactions 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Web.Services 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Xml 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Xml.Linq 3.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/android/app/ApplicationRegistration 2.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/MonoRuntimeProvider 2.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/src/mono/MonoPackageManager_Resources 3.java
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_BuildAdditionalResourcesCache 2.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_BuildLibraryImportsCache 2.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_CleanIntermediateIfNuGetsChange 2.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_ConvertResourcesCases 2.stamp
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/stamp/_ResolveLibraryProjectImports 2.stamp

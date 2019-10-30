@@ -2,3 +2,4 @@
 /Users/lucassouza/Documents/ForecastApp/ForecastApp/bin/Debug/ForecastApp.pdb
 /Users/lucassouza/Documents/ForecastApp/ForecastApp/obj/Debug/ForecastApp.dll
 /Users/lucassouza/Documents/ForecastApp/ForecastApp/obj/Debug/ForecastApp.pdb
+/Users/lucassouza/Documents/ForecastApp/ForecastApp/obj/Debug/ForecastApp.csprojAssemblyReference.cache

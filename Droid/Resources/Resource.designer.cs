@@ -71,14 +71,14 @@ namespace ForecastApp.Droid
 			// aapt resource value: 0x7F010008
 			public const int semFav = 2130771976;
 			
+			// aapt resource value: 0x7F01000B
+			public const int temperatura = 2130771979;
+			
 			// aapt resource value: 0x7F010009
-			public const int temperatura = 2130771977;
+			public const int tempMax = 2130771977;
 			
 			// aapt resource value: 0x7F01000A
-			public const int tempMax = 2130771978;
-			
-			// aapt resource value: 0x7F01000B
-			public const int tempMin = 2130771979;
+			public const int tempMin = 2130771978;
 			
 			// aapt resource value: 0x7F01000C
 			public const int voltar = 2130771980;

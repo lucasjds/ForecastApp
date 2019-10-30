@@ -53,11 +53,8 @@ namespace Project
         //Insert record in database
         public bool insertRecord (Data forecast)
         {
-            Random rand = new Random();
-            var id = rand.Next(1, 1000);
-
             //Insert Statement
-            string insertStmt = $"Insert into {TableName} Values ( {id}, '{forecast.Name}')";
+            string insertStmt = $"Insert into {TableName} Values ( {forecast.Id}, '{forecast.Name}')";
             try
             {
                 myDbObj.ExecSQL(insertStmt);
@@ -95,9 +92,21 @@ namespace Project
            
         }
 
-        
+        public bool deleteRecord(string id)
+        {
+            string deleteStmt = $"DELETE FROM {TableName} WHERE id= {id};";
+            try
+            {
+                myDbObj.ExecSQL(deleteStmt);
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine($"Error deleting record from database. {e.Message}");
+                return false;
+            }
 
-        
+        }
 
         public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
         {
