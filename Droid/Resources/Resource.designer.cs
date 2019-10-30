@@ -45,10 +45,19 @@ namespace ForecastApp.Droid
 		{
 			
 			// aapt resource value: 0x7F010000
-			public const int fragmentContainer = 2130771968;
+			public const int cidade = 2130771968;
 			
 			// aapt resource value: 0x7F010001
-			public const int mainlistview = 2130771969;
+			public const int clima = 2130771969;
+			
+			// aapt resource value: 0x7F010002
+			public const int fragmentContainer = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int mainlistview = 2130771971;
+			
+			// aapt resource value: 0x7F010004
+			public const int temperatura = 2130771972;
 			
 			static Id()
 			{
@@ -67,7 +76,10 @@ namespace ForecastApp.Droid
 			public const int Main = 2130837504;
 			
 			// aapt resource value: 0x7F020001
-			public const int PrincipalFragment = 2130837505;
+			public const int PrincipalCustomList = 2130837505;
+			
+			// aapt resource value: 0x7F020002
+			public const int PrincipalFragment = 2130837506;
 			
 			static Layout()
 			{
