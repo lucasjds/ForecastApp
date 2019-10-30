@@ -42,7 +42,7 @@ namespace ForecastApp.Droid
             {
                 foreach (var forecast in forecastLista)
                 {
-                    myObjectList.Add(new Data(forecast.Name, "123", "chuva"));
+                    myObjectList.Add(new Data(forecast.Name, forecast.Weather[0].Description, forecast.Main.Temp));
                 }
                 //creating adapter
                 var favAdapter = new MyCustomAdapter(this, myObjectList);

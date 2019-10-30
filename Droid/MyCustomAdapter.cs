@@ -54,9 +54,9 @@ namespace ForecastApp.Droid
 
                 myView.FindViewById<TextView>(Resource.Id.cidade).Text = myObject.Name;
 
-                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.Name;
+                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.Weather[0].Description;
 
-                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.Name;
+                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.Main.Temp;
 
             }
 
@@ -79,37 +79,54 @@ namespace ForecastApp.Droid
 
     public class Data
     {
-        public Data() { }
+        public Data()
+        {
+            Weather = new List<Weather>();
+            Main = new Main();
+        }
 
         public Data(string name, string clima, string temperatura)
         {
             Name = name;
+            Main = new Main(temperatura);
+            Weather = new List<Weather>();
+            Weather.Add(new Weather(clima));
         }
 
         [JsonProperty(PropertyName = "id")]
-        public string Id;
+        public string Id { get; set; }
         [JsonProperty(PropertyName = "name")]
-        public string Name;
+        public string Name { get; set; }
         [JsonProperty(PropertyName = "weather")]
-        public List<Weather> Weather;
+        public List<Weather> Weather { get; set; }
         [JsonProperty(PropertyName = "main")]
-        public Main Main;
+        public Main Main { get; set; }
 
     }
 
     public class Weather
     {
+        public Weather(string desc)
+        {
+            Description = desc;
+        }
         [JsonProperty(PropertyName = "description")]
-        public string Description;
+        public string Description { get; set; }
     }
 
     public class Main
     {
+        public Main() { }
+
+        public Main(string temp)
+        {
+            Temp = temp;
+        }
         [JsonProperty(PropertyName = "temp")]
-        public string Temp;
+        public string Temp { get; set; }
         [JsonProperty(PropertyName = "temp_min")]
-        public string TempMin;
+        public string TempMin { get; set; }
         [JsonProperty(PropertyName = "temp_max")]
-        public string TempMax;
+        public string TempMax { get; set; }
     }
 }

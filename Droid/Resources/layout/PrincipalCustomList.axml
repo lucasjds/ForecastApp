@@ -9,14 +9,14 @@
     
     <TextView
         android:textColor="@android:color/white"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:id="@+id/cidade"
     />
 
     <TextView
         android:textColor="@android:color/white"
-         android:layout_width="50dp"
+         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:id="@+id/clima"
     />

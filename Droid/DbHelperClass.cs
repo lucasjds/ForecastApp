@@ -22,11 +22,15 @@ namespace Project
         private const string TableName = "forecasts";
         private const string ColumnID = "id";
         private const string ColumnName = "cidade";
+        private const string ColumnTemp = "temp";
+        private const string ColumnClima = "clima";
         Data userObj = new Data();
 
 
         public const string CreateForecastTableQuery = "Create Table " + TableName + " ("
             + ColumnID + " TEXT,"
+            + ColumnClima + " TEXT,"
+            + ColumnTemp + " TEXT,"
             + ColumnName + " TEXT )";
 
         SQLiteDatabase myDbObj;
@@ -54,7 +58,7 @@ namespace Project
         public bool insertRecord (Data forecast)
         {
             //Insert Statement
-            string insertStmt = $"Insert into {TableName} Values ( {forecast.Id}, '{forecast.Name}')";
+            string insertStmt = $"Insert into {TableName} Values ( {forecast.Id}, '{forecast.Weather[0].Description}', '{forecast.Main.Temp}' , '{forecast.Name}')";
             try
             {
                 myDbObj.ExecSQL(insertStmt);
@@ -80,6 +84,10 @@ namespace Project
                 {
                     userObj.Id = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnID));
                     userObj.Name = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnName));
+                    Weather weather = new Weather(myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnClima)));
+                
+                    userObj.Weather.Add(weather);
+                    userObj.Main.Temp = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnTemp));
 
                     userList.Add(userObj);
                 }

@@ -45,7 +45,7 @@ namespace ForecastApp.Droid
         }
 
 
-        public async void PreencheTela(string id)
+        private async void PreencheTela(string id)
         {
             data = await APIWeather.TestAsync(id);
             TextView cidade = FindViewById<TextView>(Resource.Id.cidade);
