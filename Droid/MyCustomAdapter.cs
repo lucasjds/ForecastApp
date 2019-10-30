@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using Android.Graphics;
 using System.Net;
 using Android;
+using Newtonsoft.Json;
 
 namespace ForecastApp.Droid
 {
@@ -51,13 +52,11 @@ namespace ForecastApp.Droid
             {
                 myView = localContext.LayoutInflater.Inflate(Resource.Layout.PrincipalCustomList, null);
 
-                myView.FindViewById<TextView>(Resource.Id.cidade).Text = myObject.cidade;
+                myView.FindViewById<TextView>(Resource.Id.cidade).Text = myObject.Cidade;
 
-                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.clima;
+                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.Clima;
 
-                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.temperatura;
-
-
+                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.Temperatura;
 
             }
 
@@ -71,16 +70,39 @@ namespace ForecastApp.Droid
 
     public class Forecast
     {
-        public String cidade;
-        public String clima;
-        public String temperatura;
+        public String Cidade;
+        public String Clima;
+        public String Temperatura;
+        public int Id;
+
+        public Forecast() { }
 
         public Forecast(String _cidade, String _clima, String _temperatura)
         {
-            cidade = _cidade;
-            clima = _clima;
-            temperatura = _temperatura;
+            Cidade = _cidade;
+            Clima = _clima;
+            Temperatura = _temperatura;
         }
+    }
+
+    public class JsonModel
+    {
+        public JsonModel() { }
+
+        [JsonProperty(PropertyName = "data")]
+        public List<Data> Data;
+        
+    }
+
+    public class Data
+    {
+        public Data() { }
+
+        [JsonProperty(PropertyName = "id")]
+        public string Id;
+        [JsonProperty(PropertyName = "name")]
+        public string Name;
+
     }
 
 }
