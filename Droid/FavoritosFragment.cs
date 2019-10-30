@@ -20,12 +20,12 @@ namespace ForecastApp.Droid
 {
     public class PesquisaFragment : Fragment
     {
-        private List<string> forecasts;
+        private List<Data> forecasts;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            forecasts = new List<string>();
+            forecasts = new List<Data>();
             // Create yfoour fragment here
         }
 
@@ -51,17 +51,17 @@ namespace ForecastApp.Droid
                     var datas = JsonConvert.DeserializeObject<JsonModel>(test.ToString());
                     foreach (var data in datas.Data)
                     {
-                        forecasts.Add(data.Name);
+                        forecasts.Add(data);
                     }
                 }
             }
-            ArrayAdapter<String> ad = new ArrayAdapter<String>(this.Activity, Android.Resource.Layout.SimpleListItem1, forecasts);
+            ArrayAdapter<String> ad = new ArrayAdapter<String>(this.Activity, Android.Resource.Layout.SimpleListItem1, forecasts.Select(x => x.Name).ToList());
             mainList.SetAdapter(ad);
 
             mainList.ItemClick += (s, e) => {
                 Intent detalheActivity = new Intent(this.Activity, typeof(DetalheActivity));
                 var t = forecasts[e.Position];
-                detalheActivity.PutExtra("item", t);
+                detalheActivity.PutExtra("item", t.Id);
                 StartActivity(detalheActivity);
             };
 

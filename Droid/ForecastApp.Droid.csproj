@@ -44,6 +44,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ForecastApp\ForecastApp.csproj">
@@ -60,6 +61,8 @@
     <Compile Include="FavoritosFragment.cs" />
     <Compile Include="MyCustomAdapter.cs" />
     <Compile Include="DbHelperClass.cs" />
+    <Compile Include="DetalheActivity.cs" />
+    <Compile Include="APIWeather.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

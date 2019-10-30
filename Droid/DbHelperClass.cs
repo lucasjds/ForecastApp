@@ -22,11 +22,11 @@ namespace Project
         private const string TableName = "forecasts";
         private const string ColumnID = "id";
         private const string ColumnName = "cidade";
-        Forecast userObj = new Forecast();
+        Data userObj = new Data();
 
 
         public const string CreateForecastTableQuery = "Create Table " + TableName + " ("
-            + ColumnID + " INTEGER,"
+            + ColumnID + " TEXT,"
             + ColumnName + " TEXT )";
 
         SQLiteDatabase myDbObj;
@@ -72,17 +72,17 @@ namespace Project
         }
 
         //Select records from database
-        public List<Forecast> selectRecords()
+        public List<Data> selectRecords()
         {
             try
             {
-                List<Forecast> userList = new List<Forecast>();
+                List<Data> userList = new List<Data>();
                 ICursor myDBData = myDbObj.RawQuery($"Select * from {TableName}", null);
 
                 while (myDBData.MoveToNext())
                 {
-                    userObj.Id = myDBData.GetInt(myDBData.GetColumnIndexOrThrow(ColumnID));
-                    userObj.Cidade = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnName));
+                    userObj.Id = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnID));
+                    userObj.Name = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnName));
 
                     userList.Add(userObj);
                 }

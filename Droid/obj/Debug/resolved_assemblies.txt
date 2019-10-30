@@ -6,9 +6,9 @@
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/Newtonsoft.Json.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Core.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.dll
+/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Net.Http.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Runtime.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Xml.dll
-/Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Net.Http.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Drawing.Common.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/lucassouza/Documents/ForecastApp/Droid/obj/Debug/android/assets/System.ServiceModel.Internals.dll

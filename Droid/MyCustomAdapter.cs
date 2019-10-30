@@ -13,18 +13,18 @@ using Newtonsoft.Json;
 
 namespace ForecastApp.Droid
 {
-    public class MyCustomAdapter : BaseAdapter<Forecast>
+    public class MyCustomAdapter : BaseAdapter<Data>
     {
-        List<Forecast> forecastList;
+        List<Data> forecastList;
         Fragment localContext;
 
-        public MyCustomAdapter(Fragment myContext, List<Forecast> forecasts) : base()
+        public MyCustomAdapter(Fragment myContext, List<Data> forecasts) : base()
         {
             localContext = myContext;
             forecastList = forecasts;
         }
 
-        public override Forecast this[int position]
+        public override Data this[int position]
         {
 
             get { return forecastList[position]; }
@@ -44,7 +44,7 @@ namespace ForecastApp.Droid
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
 
-            Forecast myObject = forecastList[position];
+            Data myObject = forecastList[position];
 
             View myView = convertView; // re-use an existing view, if one is
 
@@ -52,11 +52,11 @@ namespace ForecastApp.Droid
             {
                 myView = localContext.LayoutInflater.Inflate(Resource.Layout.PrincipalCustomList, null);
 
-                myView.FindViewById<TextView>(Resource.Id.cidade).Text = myObject.Cidade;
+                myView.FindViewById<TextView>(Resource.Id.cidade).Text = myObject.Name;
 
-                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.Clima;
+                myView.FindViewById<TextView>(Resource.Id.clima).Text = myObject.Name;
 
-                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.Temperatura;
+                myView.FindViewById<TextView>(Resource.Id.temperatura).Text = myObject.Name;
 
             }
 
@@ -99,6 +99,11 @@ namespace ForecastApp.Droid
     public class Data
     {
         public Data() { }
+
+        public Data(string name, string clima, string temperatura)
+        {
+            Name = name;
+        }
 
         [JsonProperty(PropertyName = "id")]
         public string Id;

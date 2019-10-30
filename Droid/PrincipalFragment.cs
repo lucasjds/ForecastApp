@@ -18,14 +18,14 @@ namespace ForecastApp.Droid
     public class PrincipalFragment : Fragment
     {
         private ListView mainList;
-        private List<Forecast> myObjectList;
+        private List<Data> myObjectList;
         private DbHelperClass dbHelper;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             // Create your fragment here
-            myObjectList = new List<Forecast>();
+            myObjectList = new List<Data>();
             dbHelper = new DbHelperClass(this.Activity);
         }
 
@@ -41,13 +41,12 @@ namespace ForecastApp.Droid
             {
                 foreach (var forecast in forecastLista)
                 {
-                    myObjectList.Add(new Forecast(forecast.Cidade, "123", "chuva"));
+                    myObjectList.Add(new Data(forecast.Name, "123", "chuva"));
                 }
                 //creating adapter
                 var favAdapter = new MyCustomAdapter(this, myObjectList);
                 mainList.SetAdapter(favAdapter);
             }
-            
             
             return view;
         }
