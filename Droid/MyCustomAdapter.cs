@@ -85,8 +85,9 @@ namespace ForecastApp.Droid
             Main = new Main();
         }
 
-        public Data(string name, string clima, string temperatura)
+        public Data(string id, string name, string clima, string temperatura)
         {
+            Id = id;
             Name = name;
             Main = new Main(temperatura);
             Weather = new List<Weather>();

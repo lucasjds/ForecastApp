@@ -1,30 +1,29 @@
 ﻿<Properties StartupConfiguration="{CDA32770-7630-46FB-9A08-0CC6206ED04F}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/PrincipalFragment.cs">
     <Files>
-      <File FileName="Droid/PrincipalFragment.cs" Line="27" Column="12" IsPinned="True" />
+      <File FileName="Droid/PrincipalFragment.cs" Line="49" Column="35" IsPinned="True" />
       <File FileName="Droid/FavoritosFragment.cs" />
-      <File FileName="Droid/MainActivity.cs" Line="15" Column="1" />
+      <File FileName="Droid/MainActivity.cs" />
       <File FileName="Droid/MyCustomAdapter.cs" />
       <File FileName="Droid/DbHelperClass.cs" />
       <File FileName="Droid/Resources/layout/PrincipalCustomList.axml" />
       <File FileName="Droid/Assets/city.list.json" />
-      <File FileName="Droid/DetalheActivity.cs" Line="22" Column="1" />
+      <File FileName="Droid/DetalheActivity.cs" />
       <File FileName="Droid/APIWeather.cs" />
       <File FileName="Droid/Resources/layout/Main.axml" />
-      <File FileName="Droid/Resources/layout/Detalhe.axml" Line="44" Column="20" />
+      <File FileName="Droid/Resources/layout/Detalhe.axml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ForecastApp" expanded="True">
-            <Node name="ForecastApp.Droid" expanded="True">
+            <Node name="ForecastApp.Droid" expanded="True" selected="True">
               <Node name="Assets" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="layout" expanded="True" />
                 <Node name="mipmap-xxxhdpi" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
-              <Node name="DetalheActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -35,8 +34,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/lucassouza/Documents/ForecastApp/Droid/DetalheActivity.cs" relfile="Droid/DetalheActivity.cs" line="22" column="1" />
-      <Breakpoint file="/Users/lucassouza/Documents/ForecastApp/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="15" column="1" />
+      <Breakpoint file="/Users/lucassouza/Documents/ForecastApp/Droid/DbHelperClass.cs" relfile="Droid/DbHelperClass.cs" line="61" column="1" />
+      <Breakpoint file="/Users/lucassouza/Documents/ForecastApp/Droid/PrincipalFragment.cs" relfile="Droid/PrincipalFragment.cs" line="55" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.ForecastApp.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />

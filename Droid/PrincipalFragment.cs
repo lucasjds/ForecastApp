@@ -28,6 +28,8 @@ namespace ForecastApp.Droid
             // Create your fragment here
             myObjectList = new List<Data>();
             dbHelper = new DbHelperClass(this.Activity);
+
+            
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -42,13 +44,20 @@ namespace ForecastApp.Droid
             {
                 foreach (var forecast in forecastLista)
                 {
-                    myObjectList.Add(new Data(forecast.Name, forecast.Weather[0].Description, forecast.Main.Temp));
+                    myObjectList.Add(new Data(forecast.Id, forecast.Name, forecast.Weather[0].Description, forecast.Main.Temp));
                 }
                 //creating adapter
                 var favAdapter = new MyCustomAdapter(this, myObjectList);
                 mainList.SetAdapter(favAdapter);
             }
-            
+
+            mainList.ItemClick += (s, e) => {
+                Intent detalheActivity = new Intent(this.Activity, typeof(DetalheActivity));
+                var t = myObjectList[e.Position];
+                detalheActivity.PutExtra("item", t.Id);
+                StartActivity(detalheActivity);
+            };
+
             return view;
         }
 
