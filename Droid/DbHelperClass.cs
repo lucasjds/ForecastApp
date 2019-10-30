@@ -51,13 +51,13 @@ namespace Project
         }
 
         //Insert record in database
-        public bool insertRecord (Forecast forecast)
+        public bool insertRecord (Data forecast)
         {
             Random rand = new Random();
             var id = rand.Next(1, 1000);
 
             //Insert Statement
-            string insertStmt = $"Insert into {TableName} Values ( {id}, '{forecast.Cidade}')";
+            string insertStmt = $"Insert into {TableName} Values ( {id}, '{forecast.Name}')";
             try
             {
                 myDbObj.ExecSQL(insertStmt);

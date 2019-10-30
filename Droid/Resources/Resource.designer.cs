@@ -45,25 +45,43 @@ namespace ForecastApp.Droid
 		{
 			
 			// aapt resource value: 0x7F010000
-			public const int cidade = 2130771968;
+			public const int add = 2130771968;
 			
 			// aapt resource value: 0x7F010001
-			public const int clima = 2130771969;
+			public const int cidade = 2130771969;
 			
 			// aapt resource value: 0x7F010002
-			public const int fragmentContainer = 2130771970;
+			public const int clima = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int listFavoritos = 2130771971;
+			public const int desc = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int mainlistview = 2130771972;
+			public const int fragmentContainer = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int semFav = 2130771973;
+			public const int listFavoritos = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int temperatura = 2130771974;
+			public const int mainlistview = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int remove = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int semFav = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int temperatura = 2130771977;
+			
+			// aapt resource value: 0x7F01000A
+			public const int tempMax = 2130771978;
+			
+			// aapt resource value: 0x7F01000B
+			public const int tempMin = 2130771979;
+			
+			// aapt resource value: 0x7F01000C
+			public const int voltar = 2130771980;
 			
 			static Id()
 			{
@@ -79,16 +97,19 @@ namespace ForecastApp.Droid
 		{
 			
 			// aapt resource value: 0x7F020000
-			public const int FavoritosFragment = 2130837504;
+			public const int Detalhe = 2130837504;
 			
 			// aapt resource value: 0x7F020001
-			public const int Main = 2130837505;
+			public const int FavoritosFragment = 2130837505;
 			
 			// aapt resource value: 0x7F020002
-			public const int PrincipalCustomList = 2130837506;
+			public const int Main = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int PrincipalFragment = 2130837507;
+			public const int PrincipalCustomList = 2130837507;
+			
+			// aapt resource value: 0x7F020004
+			public const int PrincipalFragment = 2130837508;
 			
 			static Layout()
 			{

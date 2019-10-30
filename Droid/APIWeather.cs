@@ -8,13 +8,14 @@ namespace ForecastApp.Droid
 {
     public static class APIWeather
     {
-        public static string stringConn = "https://newsapi.org/v2/everything?q=sports&from=2019-04-14&sortBy=publishedAt&apiKey=e2b85c4d87804cb0b6865adf396d9816";
+        public static string stringConn = "https://api.openweathermap.org/data/2.5/weather?appid=2bac87e0cb16557bff7d4ebcbaa89d2f&lang=pt&units=metric&id=";
         public static string apiKey = "";
 
 
-        public static async Task<JsonModel> TestAsync()
+        public static async Task<Data> TestAsync(string id)
         {
             HttpClient client = new HttpClient();
+            stringConn += id;
             client.BaseAddress = new Uri(stringConn);
 
             // Add an Accept header for JSON format.
@@ -26,7 +27,7 @@ namespace ForecastApp.Droid
             Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
             string responseBody = await response.Content.ReadAsStringAsync();
             client.Dispose();
-            return JsonConvert.DeserializeObject<JsonModel>(responseBody);
+            return JsonConvert.DeserializeObject<Data>(responseBody);
 
         }
 

@@ -16,17 +16,35 @@ namespace ForecastApp.Droid
     [Activity(Label = "DetalheActivity")]
     public class DetalheActivity : Activity
     {
-        public static string stringConn = "https://newsapi.org/v2/everything?q=sports&from=2019-04-14&sortBy=publishedAt&apiKey=e2b85c4d87804cb0b6865adf396d9816";
-        public static string apiKey = "";
-
-
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            var cidade = Intent.GetStringExtra("item");
+            SetContentView(Resource.Layout.Detalhe);
+            var id = Intent.GetStringExtra("item");
+            PreencheTela(id);
+
+            Button voltar = FindViewById<Button>(Resource.Id.voltar);
+            voltar.Click += delegate {
+                StartActivity(new Intent(this, typeof(MainActivity)));
+            };
         }
 
-        
-        
+
+        public async void PreencheTela(string id)
+        {
+            Data data = await APIWeather.TestAsync(id);
+            TextView cidade = FindViewById<TextView>(Resource.Id.cidade);
+            cidade.Text = data.Name;
+            TextView temperatura = FindViewById<TextView>(Resource.Id.temperatura);
+            temperatura.Text = data.Main.Temp;
+            TextView tempMax = FindViewById<TextView>(Resource.Id.tempMax);
+            tempMax.Text = data.Main.TempMax;
+            TextView tempMin = FindViewById<TextView>(Resource.Id.tempMin);
+            tempMin.Text = data.Main.TempMin;
+            TextView desc = FindViewById<TextView>(Resource.Id.desc);
+            desc.Text = data.Weather[0].Description;
+
+        }
     }
 }

@@ -68,25 +68,6 @@ namespace ForecastApp.Droid
 
 
 
-    public class Forecast
-    {
-        public String Cidade;
-        public String Clima;
-        public String Temperatura;
-        public int Id;
-
-        public Forecast() { }
-
-     
-
-        public Forecast(String _cidade, String _clima, String _temperatura)
-        {
-            Cidade = _cidade;
-            Clima = _clima;
-            Temperatura = _temperatura;
-        }
-    }
-
     public class JsonModel
     {
         public JsonModel() { }
@@ -109,7 +90,26 @@ namespace ForecastApp.Droid
         public string Id;
         [JsonProperty(PropertyName = "name")]
         public string Name;
+        [JsonProperty(PropertyName = "weather")]
+        public List<Weather> Weather;
+        [JsonProperty(PropertyName = "main")]
+        public Main Main;
 
     }
 
+    public class Weather
+    {
+        [JsonProperty(PropertyName = "description")]
+        public string Description;
+    }
+
+    public class Main
+    {
+        [JsonProperty(PropertyName = "temp")]
+        public string Temp;
+        [JsonProperty(PropertyName = "temp_min")]
+        public string TempMin;
+        [JsonProperty(PropertyName = "temp_max")]
+        public string TempMax;
+    }
 }
