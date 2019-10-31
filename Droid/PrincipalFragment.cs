@@ -19,7 +19,6 @@ namespace ForecastApp.Droid
     {
         private ListView mainList;
         private List<Data> myObjectList;
-        private DbHelperClass dbHelper;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,8 +26,6 @@ namespace ForecastApp.Droid
            
             // Create your fragment here
             myObjectList = new List<Data>();
-            dbHelper = new DbHelperClass(this.Activity);
-
             
         }
 
@@ -37,25 +34,8 @@ namespace ForecastApp.Droid
             base.OnCreateView(inflater, container, savedInstanceState);
 
             var view = inflater.Inflate(Resource.Layout.PrincipalFragment, container, false);
-            mainList = view.FindViewById<ListView>(Resource.Id.mainlistview);
 
-            var forecastLista = dbHelper.selectRecords();
-            TextView edit = view.FindViewById<TextView>(Resource.Id.semFav);
-            edit.Text = string.Empty;
-            if (forecastLista.Count() > 0)
-            {
-                foreach (var forecast in forecastLista)
-                {
-                    myObjectList.Add(new Data(forecast.Id, forecast.Name, forecast.Weather[0].Description, forecast.Main.Temp));
-                }
-                //creating adapter
-                var favAdapter = new MyCustomAdapter(this, myObjectList);
-                mainList.SetAdapter(favAdapter);
-            }
-            else
-            {
-                edit.Text = "A lista de favoritos esta vazia";
-            }
+            PreencheTela(view);
 
             mainList.ItemClick += (s, e) => {
                 Intent detalheActivity = new Intent(this.Activity, typeof(DetalheActivity));
@@ -65,6 +45,26 @@ namespace ForecastApp.Droid
             };
 
             return view;
+        }
+
+        private void PreencheTela(View view)
+        {
+            DbHelperClass dbHelper = new DbHelperClass(this.Activity);
+            mainList = view.FindViewById<ListView>(Resource.Id.mainlistview);
+
+            var forecastLista = dbHelper.selectRecords();
+            TextView edit = view.FindViewById<TextView>(Resource.Id.semFav);
+
+            edit.Text = "A lista de favoritos esta vazia";
+            if (forecastLista.Count() > 0)
+            {
+                foreach (var forecast in forecastLista)
+                    myObjectList.Add(new Data(forecast.Id, forecast.Name, forecast.Weather[0].Description, forecast.Main.Temp));
+                
+                var favAdapter = new MyCustomAdapter(this, myObjectList);
+                mainList.SetAdapter(favAdapter);
+                edit.Text = string.Empty;
+            }
         }
 
      
