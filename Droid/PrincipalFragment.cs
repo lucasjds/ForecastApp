@@ -40,7 +40,9 @@ namespace ForecastApp.Droid
             mainList = view.FindViewById<ListView>(Resource.Id.mainlistview);
 
             var forecastLista = dbHelper.selectRecords();
-            if(forecastLista.Count() > 0)
+            TextView edit = view.FindViewById<TextView>(Resource.Id.semFav);
+            edit.Text = string.Empty;
+            if (forecastLista.Count() > 0)
             {
                 foreach (var forecast in forecastLista)
                 {
@@ -49,6 +51,10 @@ namespace ForecastApp.Droid
                 //creating adapter
                 var favAdapter = new MyCustomAdapter(this, myObjectList);
                 mainList.SetAdapter(favAdapter);
+            }
+            else
+            {
+                edit.Text = "A lista de favoritos esta vazia";
             }
 
             mainList.ItemClick += (s, e) => {

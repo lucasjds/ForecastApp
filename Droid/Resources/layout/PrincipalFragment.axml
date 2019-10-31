@@ -10,12 +10,12 @@
         android:id="@+id/mainlistview" 
         android:background="#359fb5"
         android:layout_width="match_parent"
-        android:layout_height="400dp"> </ListView>
+        android:layout_height="wrap_content"> </ListView>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A lista de favoritos esta vazia"
+            
             android:layout_gravity="center_vertical"
             android:id="@+id/semFav"
             android:textAlignment="center"
