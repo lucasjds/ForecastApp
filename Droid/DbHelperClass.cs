@@ -24,7 +24,7 @@ namespace Project
         private const string ColumnName = "cidade";
         private const string ColumnTemp = "temp";
         private const string ColumnClima = "clima";
-        Data userObj = new Data();
+        private Data userObj ;
 
 
         public const string CreateForecastTableQuery = "Create Table " + TableName + " ("
@@ -33,13 +33,14 @@ namespace Project
             + ColumnTemp + " TEXT,"
             + ColumnName + " TEXT )";
 
-        SQLiteDatabase myDbObj;
+        private SQLiteDatabase myDbObj;
 
         //DbHelperClass Constructor
         public DbHelperClass (Context context) : 
             base(context,name: _DatabaseName, factory: null, version: 1)
         {
-            myDbObj = WritableDatabase; 
+            myDbObj = WritableDatabase;
+            userObj = new Data();
         }
 
         public override void OnCreate(SQLiteDatabase db)
@@ -55,19 +56,18 @@ namespace Project
         }
 
         //Insert record in database
-        public bool insertRecord (Data forecast)
+        public string insertRecord (Data forecast)
         {
             //Insert Statement
             string insertStmt = $"Insert into {TableName} Values ( {forecast.Id}, '{forecast.Weather[0].Description}', '{forecast.Main.Temp}' , '{forecast.Name}')";
             try
             {
                 myDbObj.ExecSQL(insertStmt);
-                return true;
+                return "Inserido com sucesso";
             }
             catch(Exception e)
             {
-                System.Console.WriteLine($"Error inserting record. {e.Message}");
-                return false;
+                return $"Erro ao inserir  {e.Message}";
             }
             
         }
@@ -84,9 +84,7 @@ namespace Project
                 {
                     userObj.Id = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnID));
                     userObj.Name = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnName));
-                    Weather weather = new Weather(myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnClima)));
-                
-                    userObj.Weather.Add(weather);
+                    userObj.Weather.Add(new Weather(myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnClima))));
                     userObj.Main.Temp = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnTemp));
 
                     userList.Add(userObj);
@@ -100,18 +98,17 @@ namespace Project
            
         }
 
-        public bool deleteRecord(string id)
+        public string deleteRecord(string id)
         {
             string deleteStmt = $"DELETE FROM {TableName} WHERE id= {id};";
             try
             {
                 myDbObj.ExecSQL(deleteStmt);
-                return true;
+                return "removido com sucesso";
             }
             catch (Exception e)
             {
-                System.Console.WriteLine($"Error deleting record from database. {e.Message}");
-                return false;
+                return $"Erro ao deletar ";
             }
 
         }
