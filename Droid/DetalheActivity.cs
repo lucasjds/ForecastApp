@@ -35,12 +35,19 @@ namespace ForecastApp.Droid
             
             Button add = FindViewById<Button>(Resource.Id.add);
             add.Click += delegate {
-                dbHelper.insertRecord(data);
+                if (dbHelper.insertRecord(data))
+                {
+                    Utils.Display(this, "Adicionado com sucesso");
+                }
+
             };
 
             Button remove = FindViewById<Button>(Resource.Id.remove);
             remove.Click += delegate {
-                dbHelper.deleteRecord(data.Id);
+                if (dbHelper.deleteRecord(data.Id))
+                {
+                    Utils.Display(this, "Removido com sucesso");
+                }
             };
         }
 
