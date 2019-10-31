@@ -7,18 +7,15 @@ namespace ForecastApp.Droid
     [Activity(Label = "ForecastApp", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             PrincipalFragment aPrincipal = new PrincipalFragment();
-            
             PesquisaFragment aPesquisa = new PesquisaFragment();
             
             AddTab("Principal",  aPrincipal);

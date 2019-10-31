@@ -40,8 +40,7 @@ namespace ForecastApp.Droid
 
             mainList.ItemClick += (s, e) => {
                 Intent detalheActivity = new Intent(this.Activity, typeof(DetalheActivity));
-                var t = forecasts[e.Position];
-                detalheActivity.PutExtra("item", t.Id);
+                detalheActivity.PutExtra("item", forecasts[e.Position].Id);
                 StartActivity(detalheActivity);
             };
 
