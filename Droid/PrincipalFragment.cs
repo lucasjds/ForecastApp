@@ -11,7 +11,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Project;
+
 
 namespace ForecastApp.Droid
 {

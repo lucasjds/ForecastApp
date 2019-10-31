@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Project;
 
 namespace ForecastApp.Droid
 {
@@ -24,8 +23,11 @@ namespace ForecastApp.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Detalhe);
+
             dbHelper = new DbHelperClass(this);
+
             var id = Intent.GetStringExtra("item");
+
             PreencheTela(id);
 
             Button voltar = FindViewById<Button>(Resource.Id.voltar);

@@ -13,7 +13,7 @@ using Android.Database;
 using Android.Database.Sqlite;
 using ForecastApp.Droid;
 
-namespace Project
+namespace ForecastApp.Droid
 {
     public class DbHelperClass : SQLiteOpenHelper
     {
@@ -82,6 +82,7 @@ namespace Project
 
                 while (myDBData.MoveToNext())
                 {
+                    userObj = new Data();
                     userObj.Id = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnID));
                     userObj.Name = myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnName));
                     userObj.Weather.Add(new Weather(myDBData.GetString(myDBData.GetColumnIndexOrThrow(ColumnClima))));
